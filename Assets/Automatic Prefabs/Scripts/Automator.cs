@@ -29,7 +29,8 @@ namespace AutomaticPrefabs
 			{
 				if (resource is GameObject)
 				{
-					Instantiate(resource as GameObject, transform);
+					var go = Instantiate(resource as GameObject, transform);
+					go.name = resource.name;
 				}
 			}
 		}
